@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    
+}
+
+body {
+    background-image:url(../assets/img/bibliotecajpg.jpg);
+    color: white;
+}
+
+
+.navBarLista {
+    display: inline;
+    padding: 5px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(32, 32, 32);;
+     border-radius: 5px;
+
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+main {
+    background-color:rgb(175, 122, 100);
+    
+    margin: 0 30px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 5px;
+    
+}
+header {
+    padding: 30px;
+        text-align: center;
+}
+
+h1{
+    display: inline-block;
+    margin: 0 auto;
+    background-color: rgb(32, 32, 32);;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: white;
+    margin-bottom: 5px;
+} 
+
+h2 {
+    display: inline-block;
+    background-color: rgb(32, 32, 32);
+    border-radius: 5px;
+    padding: 5px 8px;
+    color: white;
+    margin-bottom: 10px;
+    
+}
+
+
+ 
+aside li {
+    list-style: none;
+    padding: 3px;
+    padding-left: 10px;
+}
+
+ .ultimaReseña{
+     margin: 5px;
+     text-align: center;
+ }
+
+ .tituloMiniReseña {
+     margin: 5px;
+     text-align: center;
+ }
+
+
+.resumenLi {
+    list-style:inside;
+    padding: 10px;
+}
+
+
+
+
+.footer {
+    background-color: rgb(175, 122, 100);
+    margin: 20px 30px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 5px;
+}
+
+footer h4 {
+    margin: 10px;
+}
+
+.divPrincipal {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "titulo titulo titulo ."
+    "imagen descripcion . aside"
+    "texto texto texto aside"
+ 
+    ;
+}
+
+.tituloLibro {
+    grid-area: titulo;
+    text-align: center;
+
+}
+
+.resumen {
+    grid-area: descripcion;
+      
+}
+
+.imgResumen {
+    grid-area: imagen;
+   border-style: solid;
+    margin-left: 150px;
+    border-radius: 8px;
+
+
+}
+
+
+
+.texto {
+    grid-area: texto;
+    padding: 20px 30px;
+    
+}
+
+.texto h4 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.aside {
+    grid-area: aside;
+    padding: 40px;
+        border-style: solid;
+        margin: 10px;
+        background-image: url(../assets/img/bibliotecajpg.jpg);
+
+   
+}
+ 
+aside ul li  {
+    display:inline-block;
+    background-color: rgb(32, 32, 32);
+    
+    border-radius: 5px;
+}
+
+aside h4 {
+    display: inline;
+    background-color: rgb(32, 32, 32);
+    border-radius: 5px;
+    
+}
+
+
+aside ul a{
+    color: white;
+    transform: scale(1.1);
+}
+
+.ordenAlf {
+    text-decoration: none;
+}
+
+.facebook:hover {
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+}
+
+.goodreads:hover {
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+}
+
+.imgResumen:hover {
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+}
+
+@media (max-width:992px) {
+
+    .divPrincipal {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "titulo  ."
+        "imagen   ."
+        "descripcion aside"
+        "texto   aside"
+        "texto  ."
+     
+        ;
+    }
+    
+    .tituloLibro {
+        grid-area: titulo;
+        text-align: center;
+    
+    }
+    
+    .resumen {
+        grid-area: descripcion;
+          
+    }
+
+    .imgResumen {
+        grid-area: imagen;       
+        margin-left: 150px;
+        border-radius: 8px;
+        height: 200px;
+
+    }
+
+    .texto {
+        grid-area: texto;
+        padding: 20px 30px;
+        
+    }
+    .texto h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .aside {
+       
+        grid-area: aside;
+        padding: 10px;
+        border-style: solid;
+        margin: 10px;
+       
+    }
+
+    .imgResumen:hover {
+        transform: scale(2.1);
+        transition-duration: 0.7s;
+    }
+
+}
+
+@media (max-width:560px) {
+    .divPrincipal {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "titulo "
+        "imagen "
+        "descripcion "
+        "texto " 
+        "texto  "
+        "aside"
+     
+        ;
+    }
+
+    .tituloLibro {
+        grid-area: titulo;
+        text-align: center;
+    
+    }
+    
+    .resumen {
+        grid-area: descripcion;
+          
+    }
+
+    .imgResumen {
+        grid-area: imagen;       
+        margin-left: 150px;
+        border-radius: 8px;
+        height: 200px;
+
+    }
+
+    .texto {
+        grid-area: texto;
+        padding: 20px 30px;
+        
+    }
+    .texto h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .aside {
+        grid-area: aside;
+        padding: 30px;
+       
+    }
+
+    .imgResumen:hover {
+        transform: scale(2.1);
+        transition-duration: 0.7s;
+    }
+
+    .facebook {
+        height: 80px;
+
+    }
+
+    .goodreads{
+        height: 80px;
+    }
+
+    .instagram {
+        height: 80px;
+    }
+
+
+}
