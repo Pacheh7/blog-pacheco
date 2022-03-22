@@ -1,0 +1,19 @@
+.footer {
+    background-color: $colorFooter;
+    margin: 20px 30px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 8px;
+    color: black;
+}
+
+footer h4 {
+    margin-left: 170px;
+}
+
+
+.redes {
+    margin-top: 5px;
+    @include contacto(50px);
+}
+

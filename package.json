@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "sass":"sass ./scss/style.scss ./css/style.css -w --no-source-map -s compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pacheh7/blog-pacheco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pacheh7/blog-pacheco/issues"
+  },
+  "homepage": "https://github.com/Pacheh7/blog-pacheco#readme"
+}

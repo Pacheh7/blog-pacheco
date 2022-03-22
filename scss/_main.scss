@@ -1,0 +1,381 @@
+main {
+    background-color:$colorMain;
+    
+    margin: 0 30px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 8px;
+
+    h3 {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 25px;
+        margin: 7px 0px;
+    
+    }
+
+    .texto h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .ordenAlf {
+        div {
+            ul{
+                li{
+                    list-style: none;
+                    padding: 5px;
+                    text-align: center;
+                   
+                }
+            }
+        }
+    }
+
+    aside {
+
+        h4 {
+            display: inline-block;
+            margin: map-get($mapsStyles,margin );
+        }
+
+        div {
+            ul {
+            display:inline-block;
+            padding-left: 20px;
+            color: white; 
+                }
+
+                  li {
+                list-style: none;
+                padding: 3px;
+                padding-left: 10px;
+                     }
+
+                      a {
+                           text-decoration: none;
+                           color: map-get($mapsStyles,color );
+                            transform: scale(1.1);
+                            
+                        }
+            }
+        }   
+}
+
+ .ultimaReseña{
+     margin: 5px;
+     text-align: center;
+ }
+
+ .tituloMiniReseña {
+     margin: 5px;
+     text-align: center;
+ }
+
+
+.resumenLi {
+    list-style:inside;
+    padding: 10px;
+}
+
+
+
+.contenidoGeneral{
+    display: inline-block;
+     border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    margin: 100px 10px;
+}
+
+.categorias {
+    text-align: center;
+}
+
+.divPrincipal {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "titulo titulo titulo ."
+    "imagen descripcion descripcion aside"
+    "texto texto texto aside"
+ 
+    ;
+}
+
+.tituloLibro {
+    grid-area: titulo;
+    text-align: center;
+
+}
+
+
+.resumen {
+    grid-area: descripcion;
+      
+}
+
+.imgResumen {
+    grid-area: imagen;
+   border-style: solid;
+    margin-left: 150px;
+    border-radius: 8px;
+
+
+}
+
+
+
+.texto {
+    grid-area: texto;
+    padding: 20px 30px;
+    @extend .parrafo;
+    
+}
+
+
+
+.aside {
+    grid-area: aside;
+    padding: 40px;
+        border-style: solid;
+        margin: 30px;
+    background-color: #141E27;
+
+   
+}
+
+.asideReseñas {
+    margin: 5px;
+    text-decoration: none;
+    text-decoration-color: none;
+   
+}
+
+.divPrincipal--Nosotros{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " quienes  quienes aside"
+    " textoNos textoNos aside"
+    " textoNos textoNos aside"
+    ;
+}
+
+.quienes {
+    grid-area: quienes;
+    text-align: center;
+}
+
+.textoNosotros {
+    grid-area: textoNos;
+    padding: 20px;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+
+ 
+
+
+
+
+@media (max-width:992px) {
+
+    .divPrincipal {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "titulo  ."
+        "imagen   ."
+        "descripcion aside"
+        "texto   aside"
+        "texto  ."
+     
+        ;
+    }
+    
+    .tituloLibro {
+        grid-area: titulo;
+        text-align: center;
+    
+    }
+    
+    .resumen {
+        grid-area: descripcion;
+          
+    }
+
+    .imgResumen {
+        grid-area: imagen;       
+        margin-left: 150px;
+        border-radius: 8px;
+        height: 200px;
+    }
+
+    .texto {
+        grid-area: texto;
+        padding: 20px 30px;
+        
+        
+    }
+    .texto h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .aside {
+       
+        grid-area: aside;
+        padding: 10px;
+        border-style: solid;
+        margin: 10px;
+       
+    }
+
+    .imgResumen:hover {
+        transform: scale(1.1);
+        transition-duration: 0.3s;
+    
+    }
+     nav {
+         ul{
+             a{
+                 display: inline-block;
+                padding: 8px 0px;
+                 }
+             }
+        }
+
+}
+
+.buttons {
+    display: none;
+}
+@media (max-width:595px) {
+        
+        .redes{
+            display: none;
+        }
+
+        .buttons {
+            display: inline-block;
+            margin: 10px;
+        }
+    .divPrincipal {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "titulo "
+        "imagen "
+        "descripcion "
+        "texto " 
+        "texto  "
+        "aside"
+     
+        ;
+    }
+
+    .tituloLibro {
+        grid-area: titulo;
+        text-align: center;
+    
+    }
+    
+    .resumen {
+        grid-area: descripcion;
+          
+    }
+
+    .imgResumen {
+        grid-area: imagen;       
+        margin-left: 150px;
+        border-radius: 8px;
+        height: 200px;
+
+    }
+
+    .texto {
+        grid-area: texto;
+        padding: 20px 30px;
+        
+    }
+    .texto h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .aside {
+        grid-area: aside;
+        padding: 30px;
+       
+    }
+
+
+
+    .facebook {
+        height: 80px;
+      
+    }
+
+    .goodreads{
+        height: 80px;
+    }
+
+    .instagram {
+        height: 80px;
+    }
+
+
+    .divPrincipal--Nosotros{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        " quienes   "
+        " textoNos  "
+        " textoNos  "
+        "aside"
+        ;
+    }
+    .quienes {
+        grid-area: quienes;
+        text-align: center;
+    }
+    
+    .textoNosotros {
+        grid-area: textoNos;
+        padding: 20px;
+    }
+    
+    .aside {
+        grid-area: aside;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+        cursor: pointer;
+
+        color: orange;
+        
+    }
+}
+
+.imgResumen:hover {
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+    border-style: double;
+}

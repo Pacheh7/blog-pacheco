@@ -1,0 +1,50 @@
+
+header {
+    background-color: $colorHeader;
+    padding: 30px;
+    text-align: center;
+    margin: 30px 30px;
+    border-radius: 8px;
+    border-width: 8px;
+    border-style: double;
+    border-color: white;
+
+    h1 {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(32, 32, 32);;
+        border-radius: 8px;
+        padding: 3px 8px;
+        color: white;
+        margin-bottom: 5px;
+        font-size: $textHeader+3;
+    }
+
+    h2 {
+        display: inline-block;
+        background-color: #202020;
+        border-radius: 5px;
+        padding: 5px 8px;
+        color: white;
+        margin-bottom: 10px;
+        font-size: $textBase+2;
+        
+    } 
+
+    .navBarLista {
+    
+        display: inline-block;
+        padding: 5px;
+        margin: 0 auto;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(82, 82, 82);
+         border-radius: 5px;
+    
+    }
+
+
+}
+
+
+
